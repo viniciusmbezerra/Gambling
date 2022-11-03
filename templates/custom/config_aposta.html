@@ -1,8 +1,8 @@
 {% extends 'base/base.html' %}
 
 {% block lista %}
+<form method="POST" enctype="multipart/form-data">
     <section class="detalhar">
-        <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="note">
                 <article id="titulo">
@@ -13,6 +13,6 @@
                     <button id="enviar" type="submit">Salvar</button>
                 </article>
             </div>
-    </form>
     </section>
+    </form>
 {% endblock lista %}

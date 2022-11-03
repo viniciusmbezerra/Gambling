@@ -1,0 +1,34 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block lista %}
+<style>
+    body {
+        background: url(/static/MegaSena/images/mega-sena-cabecalho.png);
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-position: 0% 0%;
+        background-attachment: fixed;
+    }
+</style>
+<div>
+    <h1>Mega Sena | Minhas apostas</h1>
+</div>
+
+<section class="listagem">
+    {% for bet in bets %}
+        <div class='lance'>
+            <div class="info">
+                <a class="tag"><b>Bet type:</b> {{ bet.bet_type }}</a><br>
+                <a class="tag"><b>Value:</b> R$ {{ bet.value }}</a><br>
+                <a class="tag"><b>Teimosinha:</b> R$ {{ bet.teimosinha }}</a><br>
+                <a class="tag"><b>Surpresinha:</b> R$ {{ bet.surpresinha }}</a><br>
+                <a class="tag"><b>Numbers:</b> R$ {{ bet.numbers }}</a><br>
+                <a class="tag"><b>Results:</b> R$ {{ bet.results }}</a><br>
+            </div>
+        </div>
+    {% endfor %}
+</section>
+
+{% endblock lista %}

@@ -3,6 +3,7 @@
 {% block lista %}
     {% if user.is_authenticated %}
         <section class="filtros">
+            <form style="display:none;">
             <div id="pesquisa">
                 <input id="entrada" type="text" maxlength="60">    
                 <ion-icon name="search-outline"></ion-icon>
@@ -33,6 +34,7 @@
                     </select>
                 </li>
             </ul>
+            </form>
         </section>
         <section class="listagem">
         {% for categoria in categorias %}

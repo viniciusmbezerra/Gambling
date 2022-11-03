@@ -1,0 +1,102 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block lista %}
+<style>
+    body {
+        background: url(/static/MegaSena/images/mega-sena-cabecalho.png);
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-position: 0% 0%;
+        background-attachment: fixed;
+    }
+</style>
+<section class="bet-section">
+
+    <div class="bet-box">
+        <img src="{% static 'MegaSena/images/mega-sena-logo.png' %}">
+
+        <form action="{% url 'MegaSena:bet' id_concourse %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" value="{{id_concourse}}" name="concourse">
+            <input type="hidden" value="Simples" name="bet_type">
+
+            <div class="options">
+                <div class="quant-numbers">
+                    <h2>Escolha a quantidade de números você marcará neste jogo</h2>
+                    <select name="quantity_numbers" class="div-select" id="quantity_numbers">
+                        {% for i in quant_numbers_options %}
+                            <option value="{{i}}">{{i}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="surpresinha">
+                    <h2>SURPRESINHA - aqui o sistema escolhe os números por você, indique quantas apostas deseja fazer</h2>
+                    <select name="surpresinha" class="div-select">
+                        {% for i in surpresinha_options %}
+                            <option value="{{i}}">{{i}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="teimosinha">
+                    <h2>TEIMOSINHA - Escollha em quantos concursos você quer participar com este mesmo jogo (não é válido para bolão)</h2>
+                    <select name="teimosinha" class="div-select">
+                        {% for i in teimosinha_options %}
+                            <option value="{{i}}">{{i}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="numbers">
+                {% for number in numbers %}
+                    <div class="form-group">
+                        <label for="number{{number}}" class="container">
+                            <input id="number{{number}}" type="checkbox" name="numbers" onclick="CountChecks(this)" value="{{number}}" class="checkbox-number">
+                            <span class="checkmark">{{ number }}</span>
+                        </label>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="selected-numbers">
+                <h2>Números selecionados:</h2>
+                <div class="selected-numbers-camp"></div>
+            </div>
+
+            <div class="button-sub">
+                
+            </div>
+        </form>
+        {{form}}
+    </div>
+</section>
+
+<script type="text/javascript">
+    function CountChecks(latestcheck) {
+        let checks = document.querySelectorAll('.checkbox-number');
+        let camp = document.querySelector('.selected-numbers-camp');
+        let maxchecked = parseInt(document.querySelector('#quantity_numbers').value);
+        let count = 0
+        let inner = ""
+        for (let check of checks) {
+            if( check.checked == true) {
+                count++; 
+                if( count < maxchecked+1 ) { inner += "<span class='checkmark'>"+check.value+"</span>"; }
+            }
+            if( count > maxchecked ) { latestcheck.checked = false; }
+        }
+        if( count > maxchecked ) {
+            alert('Apenas ' + maxchecked + ' números podem ser marcados.');
+        }
+        if( count == maxchecked ) {
+            document.querySelector('.button-sub').innerHTML = "<button type='submit'>Confirmar aposta</button>";
+        } else { document.querySelector('.button-sub').innerHTML = ""; }
+        camp.innerHTML = inner;
+    }
+</script>
+
+{% endblock lista %}

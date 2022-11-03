@@ -1,0 +1,132 @@
+.bet-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.bet-section .bet-box {
+    max-width: 50rem;
+    border: solid var(--color-gray-4) 1px;
+    background: var(--color-white);
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.bet-section .bet-box img {
+    width: 100%;
+}
+.bet-section .bet-box .options {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    background: rgb(255, 255, 155);
+}
+.bet-section .bet-box .options * {
+    margin: 1rem;
+    padding: 0.5rem;
+    background: white;
+}
+.bet-section .bet-box .options h2 {
+    font-size: 1.6rem;
+}
+.bet-section .bet-box .numbers {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    background: rgb(255, 255, 155);
+}
+.bet-section .bet-box .form-group {
+    width: 9.3%;
+    display: inline-block;
+    margin: 1rem 0.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.bet-section .bet-box .container {
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+}
+.bet-section .bet-box .container .checkmark {
+    position: absolute;
+    padding: 0.6rem;
+    top: 0;
+    left: 0;
+    height: 3rem;
+    width: 3rem;
+    background: rgb(70, 70, 70);
+    border-radius: 1rem;
+    color: white;
+    font-weight: bold;
+    user-select: none;
+}
+.bet-section .bet-box .container:hover input ~ .checkmark {
+    background: rgb(114, 114, 114);
+}
+.bet-section .bet-box .container input:checked ~ .checkmark {
+    background: #309e04;
+}
+.bet-section .bet-box .container input {
+    width: 0;
+    height: 0;
+}
+.bet-section .bet-box .selected-numbers {
+    width: 100%;
+    padding: 2rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.bet-section .bet-box .selected-numbers h2 {
+    font-size: 1.6rem;
+    margin: 0rem 0rem 3rem 0rem;
+    color: #397023;
+}
+.bet-section .bet-box .selected-numbers div span {
+    height: 3rem;
+    width: 3rem;
+    background: #2a8108;
+    border-radius: 1rem;
+    color: white;
+    font-weight: bold;
+    user-select: none;
+    padding: 1rem;
+    margin: 0.5rem;
+    font-size: 2rem;
+}
+.bet-section .bet-box form button {
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    background: rgb(19, 124, 89);
+    cursor: pointer;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+.div-select {
+    color: rgb(0, 77, 139);
+    font-size: 13pt;
+    border: solid rgb(0, 77, 139) 1px;
+    border-radius: 10px;
+    padding: 5px;
+    width: 20rem;
+}
+.div-select:focus {
+    box-shadow: 0px 0px 5px rgb(81, 255, 0);
+    outline: none;
+}

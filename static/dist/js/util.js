@@ -27,3 +27,9 @@ function ocultarMinilist(id){
         menu.style.opacity = '0';
     }
 }
+
+function calculoDeTempo(){
+    //relogios = document.querySelectorAll('#clock')
+    //console.log(relogios)
+    console.log('ok');
+}

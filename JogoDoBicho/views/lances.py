@@ -46,6 +46,8 @@ def cadastrar_categoria(request):
 
 def listar_lances_jb(request):
     lances = LanceJB.objects.all()
+    if len(lances) <= 0:
+        messages.warning(request, 'Não há lances')
     return render(request, 'custom/listar_lances.html', { 'lances' : lances })
 
 def listar_lances_lt(request):
@@ -77,9 +79,14 @@ def cadastrar_lance_jb(request):
                 evento: Evento = Evento.objects.create(fim=lance.fim)
                 evento.lance = lance
                 evento.save()
+                evento.verificarHora()
                 
                 messages.success(request, 'Lance criado!!')
                 threading.Thread(target=agendamento).start()
+
+                texto = f"O Lance {lance.id}# foi criado!! Voce tem ate {lance.fim}"
+                Noticia.objects.create(descricao=texto).save()
+
                 return redirect('ver_lances_jb')
             else:
                 messages.warning(request, 'Lance inválido!!')

@@ -2,8 +2,8 @@
 
 {% block lista %}
     {% if user.is_authenticated %}
-        <section class="filtros">
-            <form id="pesquisar" method="POST" action="{% url 'buscar_admins' %}">
+        <section class="filtros" >
+            <form id="pesquisar" style="display:none;" method="POST" action="{% url 'buscar_admins' %}">
                 {% csrf_token %}
                 <div id="pesquisa">
                     <input id="entrada" name='info' type="text" maxlength="60">    

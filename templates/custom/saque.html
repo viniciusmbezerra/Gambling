@@ -1,19 +1,17 @@
 {% extends 'base/base.html' %}
 {% block lista %}
+<form class="formulario" action="{% url 'sacar_conta' %}" method="post">
 <section class="detalhar">
-    <form class="formulario" action="{% url 'sacar_conta' %}" method="post">
         {% csrf_token %}
         <div class="note">
             <article id="titulo">
                 <b><ion-icon name="cash-outline"></ion-icon>&nbspSaque</b>
             </article>
             <article id="basico">
-                <ul>
-                    <li><label><b>Valor: R$</b>&nbsp</label><br></li><li><input class="caixaTexto" name="valor" type="number"></li>
+                    <li><label><b>Valor: R$</b>&nbsp</label><br></li><li><input class="caixaTexto" name="valor" type="number"></li><br>
                     <li><button id="enviar" type="submit" style="margin-left: 0px;">Sacar</button></li>
-                <ul>
             </article>
         </div>
-    </form>
 </section>
+</form>
 {% endblock lista %}

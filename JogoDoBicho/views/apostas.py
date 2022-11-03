@@ -16,6 +16,7 @@ def cadastrar_aposta_jb(request, id):
                         formApostaJB.save()
                         aposta.cliente.save()
                         messages.success(request, 'Aposta feita!!')
+                        return redirect('ver_lances_jb')
                     else:
                         messages.success(request, 'Você não possui saldo suficiente!!')
                 except:
@@ -43,7 +44,11 @@ def listar_aposta_clientes(request, id):
     lance_ = get_object_or_404(LanceJB, pk=id)
     if isMembro(request.user, 'Administradores'):
         apostas = ApostaJB.objects.filter(lance=lance_)
-        return render(request, 'custom/listar_apostas.html', { 'apostas' : apostas })
+        if len(apostas) > 0:
+            return render(request, 'custom/listar_apostas.html', { 'apostas' : apostas })
+        else:
+            messages.warning(request, "Nenhum aposta foi feita!")
+            return redirect('ver_lances_jb')
     else:
         return redirect('ver_lances_jb')
 
@@ -52,6 +57,8 @@ def listar_minhas_apostas(request):
         try:
             cliente = Cliente.objects.get(usuario__id=request.user.id)
             apostas = ApostaJB.objects.filter(cliente__id=cliente.id)
+            if len(apostas) <= 0:
+                messages.warning(request, 'Você não tem novas apostas')
             return render(request, 'custom/listar_apostas.html', { 'apostas' : apostas })
         except:
             return redirect('ver_apostas')

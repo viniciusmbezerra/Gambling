@@ -2,6 +2,7 @@
 
 {% block lista %}
     <section class="filtros">
+        <form style="display:none;">
         <div id="pesquisa">
             <input id="entrada" type="text" maxlength="60">    
             <ion-icon name="search-outline"></ion-icon>
@@ -37,6 +38,7 @@
                 </select>
             </li>
         </ul>
+        </form>
     </section>
     <section class="listagem">
         {% for aposta in apostas %}
@@ -50,7 +52,11 @@
                         <a class="tag"><b>Cliente:</b> {{aposta.cliente}}</a><br>
                     {% endif %}
                     <a class="tag" href="{% url 'detalhar_lance_jb' id=aposta.lance.id %}"><b>Lance:</b> {{aposta.lance}}</a><br>
-                    <a class="tag"><b>Escolha:</b> {{aposta.escolha}}</a><br>
+                    <a class="tag"><b>Escolhas:</b><br>
+                        {% for escolha in aposta.escolhas.all %}
+                         --> {{escolha}}<br>
+                        {% endfor %}
+                    </a><br>
                 </article>
             </div>
         {% endfor %}

@@ -9,7 +9,7 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="#222222" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Gambling: Jogo do Bicho</title>
+        <title>Gambling</title>
 
         <link rel="icon" type="image/x-icon" href="{% static 'dist\img\Icone.png' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'dist\css\estilo_base.css' %}">
@@ -20,6 +20,9 @@
         <link rel="stylesheet" type="text/css" href="{% static 'dist\css\estilo_base_filtros.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'dist\css\estilo_base_detalhar.css' %}">
         <link rel="stylesheet" type="text/css" media="only screen and (max-width: 800px)" href="{% static 'dist\css\estilo_responsivo.css' %}">
+        
+        <link rel="stylesheet" type="text/css" href="{% static 'MegaSena\css\style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'MegaSena\css\bet.css' %}">
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -32,15 +35,15 @@
                 <li id="inicio" onmouseover="verMinilist('inicio');" onmouseout="ocultarMinilist('inicio');">
                     <a><ion-icon name="home"></ion-icon>&nbspInício</a>
                     <span class="minilist">
-                        <a>Noticias</a>
+                        <a href="{% url 'ver_noticias' %}">Noticias</a>
                         <a>Sobre e Contato</a>
                     </span>
                 </li>
                 <li id="games" onmouseover="verMinilist('games');" onmouseout="ocultarMinilist('games');">
                     <a><ion-icon name="game-controller"></ion-icon>&nbspGames</a>
                     <span class="minilist">
-                        <a href="{% url 'ver_lances_jb' %}">Novos lances (JB)</a>
-                        <a>Novos lances (LT)</a>
+                        <a href="{% url 'ver_lances_jb' %}">Novos Lances</a>
+                        <a href="{% url 'MegaSena:home' %}">Novos Concursos</a>
                     </span>
                 </li>
                 {% if 'JogoDoBicho.view_cliente' in perms %}
@@ -50,20 +53,20 @@
                             <a href="{% url 'ver_admins' %}">Administradores</a>
                             <a href="{% url 'ver_clientes' %}">Clientes</a>
                             <a href="{% url 'ver_categorias' %}">Categorias</a>
-                            <a href="{% url 'ver_lances_jb' %}">Lances (JB)</a>
-                            <a href="{% url 'ver_lances_jb' %}">Lances (LT)</a>
-                            <a href="{% url 'ver_apostas' %}">Apostas (JB)</a>
-                            <a href="{% url 'ver_apostas' %}">Apostas (LT)</a>
+                            <a href="{% url 'ver_lances_jb' %}">Lances</a>
+                            <a href="{% url 'MegaSena:home' %}">Concursos</a>
+                            <a href="{% url 'ver_apostas' %}">Apostas</a>
+                            <a href="{% url 'ver_apostas' %}">Bolão</a>
                             <a href="{% url 'ver_bichos' %}">Bichos</a>
                             <a>Loterias</a>
                     </span>
                 </li>
-                {% elif 'JogoDoBicho.view_apostajb' in perms %}
+                {% elif 'JogoDoBicho.add_apostajb' in perms %}
                 <li id="rewards" onmouseover="verMinilist('rewards');" onmouseout="ocultarMinilist('rewards');">
                     <a><ion-icon name="trending-up-outline"></ion-icon>&nbspRewards</a>
                     <span class="minilist">
-                            <a href="{% url 'ver_minhas_apostas' %}">Minhas Apostas (JB)</a>
-                            <a href="{% url 'ver_minhas_apostas' %}">Minhas Apostas (LT)</a>
+                            <a href="{% url 'MegaSena:my_bets' %}">Minhas Apostas</a>
+                            <a href="{% url 'ver_minhas_apostas' %}">Meus Bolões</a>
                     </span>
                 </li>
                 {% endif %}
@@ -130,7 +133,18 @@
         {% endif %}
 
     </body>
-
+    <script defer>
+        relogios = document.querySelectorAll('#clock');
+        for (let index = 0; index < relogios.length; index++) {
+            var clock = relogios[index];
+            if(clock.innerText == "Encerrado"){
+                clock.style.color = 'red';
+            }
+            else{
+                clock.style.color = 'green';
+            }
+        }
+    </script>
     <script src="{% static 'dist\js\util.js' %}" defer></script>
-
+    
 </html>

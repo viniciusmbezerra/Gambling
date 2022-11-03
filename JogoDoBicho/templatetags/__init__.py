@@ -1,8 +1,11 @@
-import time
-import schedule
 import threading
+import time
+
 import keyboard
+import schedule
+
 from JogoDoBicho.models import Evento
+
 
 def agendamento():
     try:

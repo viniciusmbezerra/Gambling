@@ -1,8 +1,8 @@
 from django.urls import path
-from JogoDoBicho.views import usuario, admin, cliente, lances, apostas
+from JogoDoBicho.views import usuario, admin, cliente, lances, apostas, noticias
 
 urlpatterns = [
-    path('', lances.listar_lances_jb, name="ver_lances_jb"),
+    path('', noticias.ver_noticias, name="ver_noticias"),
     path('login/',usuario.logar, name="logar_usuario"),
     path('autenticar_usuario', usuario.autenticar_usuario, name='autenticar_usuario'),
     path('logout_usuario/', usuario.logout_usuario, name='logout_usuario'),
@@ -18,6 +18,7 @@ urlpatterns = [
     path('categorias/novo', lances.cadastrar_categoria, name="cadastrar_categoria"),
     path('bichos/ver', lances.listar_bichos, name="ver_bichos"),
     path('bicho/novo', lances.cadastrar_bicho, name="cadastrar_bicho"),
+    path('lances/ver', lances.listar_lances_jb, name="ver_lances_jb"),
     path('lance/<int:id>/', lances.detalhar_lance_jb, name="detalhar_lance_jb"),
     path('lance/novo', lances.cadastrar_lance_jb, name="cadastrar_lance_jb"),
     path('lance/<int:id>/resultado/', lances.ver_resultado, name="ver_resultado"),

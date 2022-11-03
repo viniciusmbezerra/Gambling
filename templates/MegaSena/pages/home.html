@@ -1,0 +1,39 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block lista %}
+<style>
+    body {
+        background: url(/static/MegaSena/images/mega-sena-cabecalho.png);
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-position: 0% 0%;
+        background-attachment: fixed;
+    }
+</style>
+<div>
+    <h1 style="margin-top:20px;">Mega Sena | Concursos</h1>
+</div>
+
+<a href="{% url 'MegaSena:my_bets' %}" id="my_bets">Ver minhas apostas</a>
+
+<section class="listagem">
+    {% for concourse in concourses %}
+        <div class='lance'>
+            <b id="cod">{{concourse.id}}</b>
+            <div class="info">
+                <a class="tag"><b>Arrecadação total:</b> R$ {{ concourse.collection_moment }}</a><br>
+                <a class="tag"><b>Data sorteio:</b> {{ concourse.draw_date }}</a><br>
+                {% if concourse.status == 'Open' %}
+                    <a href="{% url 'MegaSena:bet' concourse.id %}" id="bet">Apostar</a>
+                {% endif %}
+                {% if concourse.status == 'Closed' %}
+                    <a class="tag"><b>Resultado:</b> {{ concourse.result }}</a><br>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</section>
+
+{% endblock lista %}

@@ -1,11 +1,12 @@
 from django.contrib import admin
-from JogoDoBicho.models import Administrador, Bicho, Categoria, LanceJB, LanceLT, ApostaJB, ApostaLT, Cliente, Premio, Evento
+from JogoDoBicho.models import Administrador, Bicho, Categoria, LanceJB, LanceLT, ApostaJB, ApostaLT, Cliente, Premio, Evento, Noticia
 
 # Register your models here.
 admin.site.register(Bicho)
 admin.site.register(Administrador)
 admin.site.register(Categoria)
 admin.site.register(Evento)
+admin.site.register(Noticia)
 admin.site.register(Premio)
 admin.site.register(LanceJB)
 admin.site.register(LanceLT)

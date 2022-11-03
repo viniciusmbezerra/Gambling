@@ -1,7 +1,5 @@
 from django import template 
 from JogoDoBicho.models import Cliente, Administrador
-from core.settings import STATICFILES_DIRS
-
 register = template.Library() 
 
 @register.simple_tag

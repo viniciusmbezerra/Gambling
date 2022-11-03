@@ -1,0 +1,52 @@
+{% extends 'base/base.html' %}
+
+{% block lista %}
+    {% if user.is_authenticated %}
+        <section class="filtros">
+            <form style="display:none;">
+            <div id="pesquisa">
+                <input id="entrada" type="text" maxlength="60">    
+                <ion-icon name="search-outline"></ion-icon>
+            </div>
+            <ul>
+                <li>
+                    <b>Filtro 01:</b><br>
+                    <select>
+                        <option>crescente</option>
+                    </select>
+                </li>
+                <li>
+                    <b>Filtro 02:</b><br>
+                    <select>
+                        <option>crescente</option>
+                    </select>
+                </li>
+                <li>
+                    <b>Filtro 03:</b><br>
+                    <select>
+                        <option>crescente</option>
+                    </select>
+                </li>
+                <li>
+                    <b>Filtro 04:</b><br>
+                    <select>
+                        <option>crescente</option>
+                    </select>
+                </li>
+            </ul>
+        </form>
+        </section>
+        <section class="listagem">
+        {% for noticia in noticias %}
+            <div class="note">
+                <article id="titulo">
+                    <b>{{noticia.id}}# Noticia - Data: {{ noticia.registro }}</b>
+                </article>
+                <article id="basico">
+                    {{ noticia.descricao }}
+                </article>
+            </div>
+        {% endfor %}
+    </section>
+    {% endif %}
+{% endblock lista %}
