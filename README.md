@@ -21,14 +21,19 @@ python start_windows.py
 ## 1. Jogo do bicho
 Vídeo explicativo: https://drive.google.com/file/d/1zusej-WBqjRmz6jsh8lE5C5nBAI049i6/view?usp=share_link
 
-* Funcionalidade
- * Noticias
+* Funcionalidade:
+   Noticias
     Servem para avisar sobre os novos lances e os ganhadores de cada lance encerrado.
+  ---
  * Admin
     Área de administração para a banca(casa)
 
+---
+
 * Lances
  São banners de Jogos, são usados para iniciar um novo jogo, somente o administrador pode cria-lo.
+
+---
 
 * Apostas
  O clinte pode fazer mais de uma aposta no mesmo lance, podendo ser de animais diferente ou iguas.
@@ -46,6 +51,8 @@ Vídeo explicativo: https://drive.google.com/file/d/1zusej-WBqjRmz6jsh8lE5C5nBAI
 * Apostas 
 
 A aposta mínima, de 6 números, custa R$ 4,50. Quanto mais números marcar, maior o preço da aposta e maiores as chances de faturar o prêmio mais cobiçado do país.
+
+---
 
 * Premiação 
 
