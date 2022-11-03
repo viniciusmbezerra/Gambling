@@ -1,0 +1,19 @@
+{% extends 'base/base.html' %}
+{% block lista %}
+<section class="detalhar">
+    <form id="formulario" action="{% url 'autenticar_usuario' %}" method="post">
+        {% csrf_token %}
+        <div class="note">
+            <article id="titulo">
+                <b>Perfil</b>
+            </article>
+            <article id="basico">
+                <p id="icone"><img src="{{ perfil.foto.url }}"> {{ perfil.usuario.first_name }} {{ perfil.usuario.last_name }}<p>
+                {{ formPerfil.as_p }}
+                {{ formUsuario.as_p }}
+                <button id="enviar" type="submit">Atualizar</button>
+            </article>
+        </div>
+    </form>
+</section>
+{% endblock lista %}

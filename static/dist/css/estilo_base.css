@@ -1,0 +1,70 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;1,100;1,200&family=Staatliches&display=swap");
+
+/*
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Staatliches', cursive;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --corFundo1: #FFFFFF;
+    --corFundo2: #222222;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    background-color: white;
+    background-size: 50px;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+input, button {
+    width: -webkit-fill-available;
+    padding: 4px 8px;
+    border: 1px solid black;
+    border-radius: 15px;
+
+    box-shadow: inset 0px 0px 3px 0px white;
+    background-color: transparent;
+    outline: none;
+}
+
+h1.subtitulo {
+    width: 100%;
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+
+    font-family: 'Staatliches', cursive;
+}
+
+div.messages {
+    position: fixed;
+    bottom: 0;
+    left: 50%; 
+    border-radius: 25px;
+    padding: 10px 20px;
+    transform: translate(-50%, -50%); 
+    color: white;
+}
+
+div#alert_success{
+    border: 2px solid green;
+    background-color: rgb(90, 199, 90);
+}
+
+div#alert_warning {
+    border: 2px solid red;
+    background-color: rgb(255, 123, 123);
+}

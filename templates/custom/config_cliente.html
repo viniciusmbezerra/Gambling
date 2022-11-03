@@ -1,0 +1,26 @@
+{% extends 'base/base.html' %}
+
+{% block lista %}
+    <section class="detalhar">
+        <form id="formulario" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="note">
+                <article id="titulo">
+                    <b>Informações Usuario</b>
+                </article>
+                <article id="basico">
+                    {{ formUsuario.as_p }}
+                </article>
+            </div>
+            <div class="note">
+                <article id="titulo">
+                    <b>Informações Pessoais</b>
+                </article>
+                <article id="basico">
+                    {{ formCliente.as_p }}
+                    <button id="enviar" type="submit">Salvar</button>
+                </article>
+            </div>
+    </form>
+    </section>
+{% endblock lista %}

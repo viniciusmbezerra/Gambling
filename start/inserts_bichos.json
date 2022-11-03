@@ -1,0 +1,276 @@
+[
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 1,
+  "fields": {
+    "nome": "Aguia",
+    "grupo": 1,
+    "icone": "JogoDoBicho/src/img/animais/AGUIA.png",
+    "dezenhas": "01-02-03-04"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 2,
+  "fields": {
+    "nome": "Avestruz",
+    "grupo": 2,
+    "icone": "JogoDoBicho/src/img/animais/AVESTRUZ.png",
+    "dezenhas": "05-06-07-08"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 3,
+  "fields": {
+    "nome": "Burro",
+    "grupo": 3,
+    "icone": "JogoDoBicho/src/img/animais/BURRO.png",
+    "dezenhas": "09-10-11-12"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 4,
+  "fields": {
+    "nome": "Borboleta",
+    "grupo": 4,
+    "icone": "JogoDoBicho/src/img/animais/BORBOLETA.png",
+    "dezenhas": "13-14-15-16"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 5,
+  "fields": {
+    "nome": "Cachorro",
+    "grupo": 5,
+    "icone": "JogoDoBicho/src/img/animais/CACHORRO.png",
+    "dezenhas": "17-18-19-20"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 6,
+  "fields": {
+    "nome": "Cabra",
+    "grupo": 6,
+    "icone": "JogoDoBicho/src/img/animais/CABRA.png",
+    "dezenhas": "21-22-23-24"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 7,
+  "fields": {
+    "nome": "Carneiro",
+    "grupo": 7,
+    "icone": "JogoDoBicho/src/img/animais/CARNEIRO.png",
+    "dezenhas": "25-26-27-28"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 8,
+  "fields": {
+    "nome": "Camelo",
+    "grupo": 8,
+    "icone": "JogoDoBicho/src/img/animais/CAMELO.png",
+    "dezenhas": "29-30-31-32"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 9,
+  "fields": {
+    "nome": "Cobra",
+    "grupo": 9,
+    "icone": "JogoDoBicho/src/img/animais/COBRA.png",
+    "dezenhas": "33-34-35-36"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 10,
+  "fields": {
+    "nome": "Coelho",
+    "grupo": 10,
+    "icone": "JogoDoBicho/src/img/animais/COELHO.png",
+    "dezenhas": "37-38-39-40"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 11,
+  "fields": {
+    "nome": "Cavalho",
+    "grupo": 11,
+    "icone": "JogoDoBicho/src/img/animais/CAVALO.png",
+    "dezenhas": "41-42-43-44"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 12,
+  "fields": {
+    "nome": "Efefante",
+    "grupo": 12,
+    "icone": "JogoDoBicho/src/img/animais/ELEFANTE.png",
+    "dezenhas": "45-46-47-48"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 13,
+  "fields": {
+    "nome": "Galo",
+    "grupo": 13,
+    "icone": "JogoDoBicho/src/img/animais/GALO.png",
+    "dezenhas": "49-50-51-52"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 14,
+  "fields": {
+    "nome": "Gato",
+    "grupo": 14,
+    "icone": "JogoDoBicho/src/img/animais/GATO.png",
+    "dezenhas": "53-54-55-56"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 15,
+  "fields": {
+    "nome": "Jacare",
+    "grupo": 15,
+    "icone": "JogoDoBicho/src/img/animais/JACARE.png",
+    "dezenhas": "57-58-59-60"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 16,
+  "fields": {
+    "nome": "LeÒo",
+    "grupo": 16,
+    "icone": "JogoDoBicho/src/img/animais/LEAO.png",
+    "dezenhas": "61-62-63-64"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 17,
+  "fields": {
+    "nome": "Macaco",
+    "grupo": 17,
+    "icone": "JogoDoBicho/src/img/animais/MACACO.png",
+    "dezenhas": "65-66-67-68"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 18,
+  "fields": {
+    "nome": "Porco",
+    "grupo": 18,
+    "icone": "JogoDoBicho/src/img/animais/PORCO.png",
+    "dezenhas": "69-70-71-72"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 19,
+  "fields": {
+    "nome": "PavÒo",
+    "grupo": 19,
+    "icone": "JogoDoBicho/src/img/animais/PAVAO.png",
+    "dezenhas": "73-74-75-76"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 20,
+  "fields": {
+    "nome": "Peru",
+    "grupo": 20,
+    "icone": "JogoDoBicho/src/img/animais/PERU.png",
+    "dezenhas": "77-78-79-80"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 21,
+  "fields": {
+    "nome": "Touro",
+    "grupo": 21,
+    "icone": "JogoDoBicho/src/img/animais/TOURO.png",
+    "dezenhas": "81-82-83-84"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 22,
+  "fields": {
+    "nome": "Tigre",
+    "grupo": 22,
+    "icone": "JogoDoBicho/src/img/animais/TIGRE.png",
+    "dezenhas": "85-86-87-88"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 23,
+  "fields": {
+    "nome": "Urso",
+    "grupo": 23,
+    "icone": "JogoDoBicho/src/img/animais/URSO.png",
+    "dezenhas": "89-90-91-92"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 24,
+  "fields": {
+    "nome": "Veado",
+    "grupo": 24,
+    "icone": "JogoDoBicho/src/img/animais/VEADO.png",
+    "dezenhas": "93-94-95-96"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 25,
+  "fields": {
+    "nome": "Vaca",
+    "grupo": 25,
+    "icone": "JogoDoBicho/src/img/animais/VACA.png",
+    "dezenhas": "97-98-99-00"
+  }
+},
+{
+  "model": "JogoDoBicho.categoria",
+  "pk": 1,
+  "fields": {
+    "descricao": "Comum",
+    "valor": 50.0
+  }
+},
+{
+  "model": "JogoDoBicho.categoria",
+  "pk": 2,
+  "fields": {
+    "descricao": "Incomum",
+    "valor": 100.0
+  }
+},
+{
+  "model": "JogoDoBicho.categoria",
+  "pk": 3,
+  "fields": {
+    "descricao": "Raro",
+    "valor": 200.0
+  }
+}
+]

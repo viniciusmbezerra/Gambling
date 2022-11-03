@@ -1,0 +1,48 @@
+{% extends 'base/base.html' %}
+
+{% block lista %}
+    {% if user.is_authenticated %}
+        <section class="filtros">
+            <form id="pesquisar" method="POST" action="{% url 'buscar_admins' %}">
+                {% csrf_token %}
+                <div id="pesquisa">
+                    <input id="entrada" name='info' type="text" maxlength="60">    
+                    <ion-icon name="search-outline" onclick="document.getElementById('pesquisar').submit();"></ion-icon>
+                </div>
+                <ul>
+                    <li>
+                        <b>Nome:</b><br>
+                        <select name="nome">
+                            <option value="usuario__username">A-Z</option>
+                            <option value="-usuario__username">Z-A</option>
+                        </select>
+                    </li>
+                    <li>
+                        <b>Email:</b><br>
+                        <select name="email">
+                            <option value="usuario__email">A-Z</option>
+                            <option value="-usuario__email">Z-A</option>
+                        </select>
+                    </li>
+                </ul>
+            <form>
+        </section>
+        <section class="listagem">
+        {% for admin in admins %}
+            <div class="cliente">
+                {% if admin.foto %}
+                    <img id="foto" src="{{ admin.foto.url }}" >
+                {% else %}
+                    <img id="foto" src="static/dist/img/anonimo.png">
+                {% endif %}
+                <div id="info">
+                    <b><a id="nome" style="font-size: 100%;">{{ admin.usuario.first_name}}</a></b>
+                    <a id="sobrenome" style="font-size: 80%;">{{ admin.usuario.last_name}}</a>
+                    <a id="email" style="font-size: 70%;">{{ admin.usuario.email }}</a></b>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+    <a id="add" href="{% url 'cadastrar_admin' %}"><ion-icon name="add-outline"></ion-icon></a>
+    {% endif %}
+{% endblock lista %}

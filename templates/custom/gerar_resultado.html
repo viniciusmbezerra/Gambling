@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% block lista %}
+<section class="detalhar">
+    <form class="formulario" action="{% url 'autenticar_usuario' %}" method="post">
+        {% csrf_token %}
+        <ul class="note">
+            <article id="titulo">
+                <b>Resultado</b>
+            </article>
+            <article id="basico">
+                    
+            </article>
+        </ul>
+    </form>
+</section>
+{% endblock lista %}

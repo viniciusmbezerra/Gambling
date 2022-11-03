@@ -1,0 +1,136 @@
+{% load static %}
+{% load tags %}
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>  
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="theme-color" content="#00ff5d" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#222222" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Gambling: Jogo do Bicho</title>
+
+        <link rel="icon" type="image/x-icon" href="{% static 'dist\img\Icone.png' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'dist\css\estilo_base.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'dist\css\estilo_base_menu.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'dist\css\estilo_base_minilist.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'dist\css\estilo_base_principal.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'dist\css\estilo_base_listas.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'dist\css\estilo_base_filtros.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'dist\css\estilo_base_detalhar.css' %}">
+        <link rel="stylesheet" type="text/css" media="only screen and (max-width: 800px)" href="{% static 'dist\css\estilo_responsivo.css' %}">
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+       
+        <nav id="menu">
+            <a href="/"><img id="icone" src="{% static 'dist\img\Icone_zebra.png' %}"></a>
+            <ul>
+                <li id="inicio" onmouseover="verMinilist('inicio');" onmouseout="ocultarMinilist('inicio');">
+                    <a><ion-icon name="home"></ion-icon>&nbspInício</a>
+                    <span class="minilist">
+                        <a>Noticias</a>
+                        <a>Sobre e Contato</a>
+                    </span>
+                </li>
+                <li id="games" onmouseover="verMinilist('games');" onmouseout="ocultarMinilist('games');">
+                    <a><ion-icon name="game-controller"></ion-icon>&nbspGames</a>
+                    <span class="minilist">
+                        <a href="{% url 'ver_lances_jb' %}">Novos lances (JB)</a>
+                        <a>Novos lances (LT)</a>
+                    </span>
+                </li>
+                {% if 'JogoDoBicho.view_cliente' in perms %}
+                <li id="admin" onmouseover="verMinilist('admin');" onmouseout="ocultarMinilist('admin');">
+                    <a><ion-icon name="desktop-outline"></ion-icon>&nbspAdmin</a>
+                    <span class="minilist">
+                            <a href="{% url 'ver_admins' %}">Administradores</a>
+                            <a href="{% url 'ver_clientes' %}">Clientes</a>
+                            <a href="{% url 'ver_categorias' %}">Categorias</a>
+                            <a href="{% url 'ver_lances_jb' %}">Lances (JB)</a>
+                            <a href="{% url 'ver_lances_jb' %}">Lances (LT)</a>
+                            <a href="{% url 'ver_apostas' %}">Apostas (JB)</a>
+                            <a href="{% url 'ver_apostas' %}">Apostas (LT)</a>
+                            <a href="{% url 'ver_bichos' %}">Bichos</a>
+                            <a>Loterias</a>
+                    </span>
+                </li>
+                {% elif 'JogoDoBicho.view_apostajb' in perms %}
+                <li id="rewards" onmouseover="verMinilist('rewards');" onmouseout="ocultarMinilist('rewards');">
+                    <a><ion-icon name="trending-up-outline"></ion-icon>&nbspRewards</a>
+                    <span class="minilist">
+                            <a href="{% url 'ver_minhas_apostas' %}">Minhas Apostas (JB)</a>
+                            <a href="{% url 'ver_minhas_apostas' %}">Minhas Apostas (LT)</a>
+                    </span>
+                </li>
+                {% endif %}
+                {% if user.is_authenticated %}
+                <li id="conta" onmouseover="verMinilist('conta');" onmouseout="ocultarMinilist('conta');">
+                    <a><ion-icon name="person"></ion-icon>&nbspConta</a>
+                    <span class="minilist">
+                        <a href="{% url 'ver_perfil' %}">Perfil</a>
+                        {% if user.groups.all.0.name == 'Clientes' %}
+                        <a href="{% url 'depositar_conta' %}">Depositar</a>
+                        <a href="{% url 'sacar_conta' %}">Sacar</a>
+                        {% endif %}
+                        <a href="{% url 'logout_usuario' %}">Sair</a>
+                    </span>
+                </li>
+                {% else %}
+                <li id="login" onmouseover="verMinilist('login');" onmouseout="ocultarMinilist('login');">
+                    <a><ion-icon name="log-in-outline"></ion-icon>&nbspLogin</a>
+                    <span class="minilist">
+                        <a href="{% url 'logar_usuario' %}">Entrar</a>
+                        <a href="{% url 'cadastrar_clientes' %}">Cadastrar</a>
+                    </span>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+
+        <main id="principal">
+            <header>
+                <img src="{% static 'dist\img\Icone_bicho.png' %}"> &nbsp Jogo do Bicho
+            </header>
+            <section id="corpo">
+                {% block lista %}{% endblock lista %}
+            </section>
+            <footer>
+            </footer>
+        </main>     
+
+        {% if user.is_authenticated %}
+        
+            <nav id="user">
+                <img id="icone" src="{% imgCliente user.id %}">
+                <div id="extra">
+                {% if user.groups.all.0.name == 'Clientes' %}
+                    <b>{{user.first_name}} {{user.last_name}}</b> | Saldo: <b id="saldo"> R$ {%saldoCliente user.id %}</b>
+                {% endif %}
+            
+                {% if user.groups.all.0.name == 'Administradores'  %}
+                    <b>{{user.first_name}} {{user.last_name}}</b> | <b id="admin">ADMIN*</b>     
+                {% endif %}
+                <div>
+            </nav>     
+            
+        {% endif %}
+
+        {% if messages %}
+
+            {% for message in messages %}
+            <div {% if message.tags %}id="{{ message.tags }}"{% endif %} class="messages" >
+                {{ message }}
+            </div>
+            {% endfor %}
+
+        {% endif %}
+
+    </body>
+
+    <script src="{% static 'dist\js\util.js' %}" defer></script>
+
+</html>

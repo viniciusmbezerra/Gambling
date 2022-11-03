@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+{% block lista %}
+<section class="detalhar">
+    <form class="formulario" action="{% url 'autenticar_usuario' %}" method="post">
+        {% csrf_token %}
+        <ul class="note">
+            <article id="titulo">
+                <b>Login</b>
+            </article>
+            <article id="basico">
+                    <p><label><b>Email:</b>&nbsp</label><input class="caixaTexto" name="username"type="text"><br></p>
+                    <p><label><b>Senha:</b>&nbsp</label><input class="caixaTexto" name="password" type="password"><br></p>
+                    <p><a id="esqueci">Esqueci a senha</a><br></p>
+                    <button id="cadastrar" type="button" onclick="link('{% url 'cadastrar_clientes' %}');" style="margin-right: 5px; margin-bottom: 10px;"><ion-icon name="person-add-outline"></ion-icon>&nbspCriar</button>
+                    <button id="enviar" type="submit"><ion-icon name="enter-outline"></ion-icon>&nbspEntrar</button>
+            </article>
+        </ul>
+    </form>
+</section>
+{% endblock lista %}

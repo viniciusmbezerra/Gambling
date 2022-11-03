@@ -1,0 +1,59 @@
+{% extends 'base/base.html' %}
+
+{% block lista %}
+    <section class="filtros">
+        <div id="pesquisa">
+            <input id="entrada" type="text" maxlength="60">    
+            <ion-icon name="search-outline"></ion-icon>
+        </div>
+        <ul>
+            <li>
+                <b>Data:</b><br>
+                <select>
+                    <option>Recentes</option>
+                    <option>Antigos</option>
+                </select>
+            </li>
+            <li>
+                <b>Categoria:</b><br>
+                <select>
+                    <option>Simples</option>
+                    <option>Incomum</option>
+                    <option>Raro</option>
+                </select>
+            </li>
+            <li>
+                <b>Valor:</b><br>
+                <select>
+                    <option>Maior</option>
+                    <option>Menor</option>
+                </select>
+            </li>
+            <li>
+                <b>Total:</b><br>
+                <select>
+                    <option>Maior</option>
+                    <option>Menor</option>
+                </select>
+            </li>
+        </ul>
+    </section>
+    <section class="listagem">
+        {% for aposta in apostas %}
+            <div class="note">
+                <article id="titulo">
+                    <b>{{aposta.id}}# Aposta</b>
+                </article>
+                <article id="basico">
+                    <a class="tag"><b>Registro:</b> {{aposta.registro}}</a><br>
+                    {% if user.groups.all.0.name == 'Administradores' %}
+                        <a class="tag"><b>Cliente:</b> {{aposta.cliente}}</a><br>
+                    {% endif %}
+                    <a class="tag" href="{% url 'detalhar_lance_jb' id=aposta.lance.id %}"><b>Lance:</b> {{aposta.lance}}</a><br>
+                    <a class="tag"><b>Escolha:</b> {{aposta.escolha}}</a><br>
+                </article>
+            </div>
+        {% endfor %}
+    </section>
+        
+{% endblock lista %}

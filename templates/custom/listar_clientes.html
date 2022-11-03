@@ -1,0 +1,55 @@
+{% extends 'base/base.html' %}
+
+{% block lista %}
+    {% if user.is_authenticated %}
+        <section class="filtros">
+            <div id="pesquisa">
+                <input id="entrada" type="text" maxlength="60">    
+                <ion-icon name="search-outline"></ion-icon>
+            </div>
+            <ul>
+                <li>
+                    <b>Filtro 01:</b><br>
+                    <select>
+                        <option>crescente</option>
+                    </select>
+                </li>
+                <li>
+                    <b>Filtro 02:</b><br>
+                    <select>
+                        <option>crescente</option>
+                    </select>
+                </li>
+                <li>
+                    <b>Filtro 03:</b><br>
+                    <select>
+                        <option>crescente</option>
+                    </select>
+                </li>
+                <li>
+                    <b>Filtro 04:</b><br>
+                    <select>
+                        <option>crescente</option>
+                    </select>
+                </li>
+            </ul>
+        </section>
+        <section class="listagem">
+        {% for cliente in clientes %}
+            <div class="cliente">
+                {% if cliente.foto %}
+                    <img id="foto" src="{{ cliente.foto.url }}" >
+                {% else %}
+                    <img id="foto" src="static/dist/img/anonimo.png">
+                {% endif %}
+                <div id="info">
+                    <b><a id="nome" style="font-size: 100%;">{{ cliente.usuario.first_name}}</a></b>
+                    <a id="nome" style="font-size: 80%;">{{ cliente.usuario.last_name}}</a>
+                    <a id="idade"  style="font-size: 70%;">{{ cliente.idade }} anos</a></b>
+                    <a id="email" style="font-size: 70%;">{{ cliente.usuario.email }}</a></b>
+                </div>
+            </div>
+        {% endfor %}
+        </section>
+    {% endif %}
+{% endblock lista %}

@@ -1,0 +1,44 @@
+{% extends 'base/base.html' %}
+
+{% block lista %}
+        <section class="detalhar">
+            <div class="note">
+                <article id="banner" style="background: url('{{ lance.banner.url}}'); background-size: 100%;">
+                    {{ lance.id }}# Lance
+                </article>
+            </div>
+            <div class="note">
+                <article id="titulo">
+                    <b>Informações Básicas</b>
+                </article>
+                <article id="basico">
+                    <b>Código:</b> {{ lance.id }}<br>
+                    <b>Valor:</b> R$ {{ lance.categoria.valor }}<br>
+                    <b>Inicio:</b> {{ lance.registro }}<br>
+                    <b>Fim:</b> {{ lance.fim }}<br>
+                    <b>Termina:</b> {{ lance.termina }}<br>
+                </article>
+            </div>
+            <div class="note">
+                <article id="titulo">
+                    <b>Apostas</b>
+                </article>
+                <article id="basico">
+                    <b>Valor acumulado:</b> R$ {{ acumulativo }}<br>
+                    <b>Nº de Apostas:</b> {{apostas.count}}
+                    {% if lance.resultado %}
+                        <li><br><button id="enviar" onclick="link('{% url 'ver_resultado' id=lance.id %}');" >Resultado</button></li>
+                    {% endif %}
+                    {% if user.groups.all.0.name == 'Clientes' %}
+                    {% if lance.termina == 'Encerrado' %}<br><br>Não é possivel apostar mais nesse lance{% else %}
+                        <li><br><button id="enviar" onclick="link('{% url 'cadastrar_aposta_jb' id=lance.id %}');">Apostar</button></li>
+                    {% endif %}
+                    {% elif user.groups.all.0.name == 'Administradores' %}
+                        <li><br><button id="enviar" onclick="link('{% url 'ver_aposta_clientes' id=lance.id %}');" >Apostas Feitas</button></li>
+                    {% else %}  
+                        <li><br><button id="enviar" onclick="link('{% url 'logar_usuario' %}');" >Apostar</button></li>
+                    {% endif %}
+                </article>
+            </div>
+        </section>
+{% endblock lista %}

@@ -1,0 +1,52 @@
+{% extends 'base/base.html' %}
+
+{% block lista %}
+    {% if user.is_authenticated %}
+        <section class="filtros">
+            <div id="pesquisa">
+                <input id="entrada" type="text" maxlength="60">    
+                <ion-icon name="search-outline"></ion-icon>
+            </div>
+            <ul>
+                <li>
+                    <b>Filtro 01:</b><br>
+                    <select>
+                        <option>crescente</option>
+                    </select>
+                </li>
+                <li>
+                    <b>Filtro 02:</b><br>
+                    <select>
+                        <option>crescente</option>
+                    </select>
+                </li>
+                <li>
+                    <b>Filtro 03:</b><br>
+                    <select>
+                        <option>crescente</option>
+                    </select>
+                </li>
+                <li>
+                    <b>Filtro 04:</b><br>
+                    <select>
+                        <option>crescente</option>
+                    </select>
+                </li>
+            </ul>
+        </section>
+        <section class="listagem">
+        {% for categoria in categorias %}
+            <div class="note">
+                <article id="titulo">
+                    <b>{{categoria.id}}# Categoria - {{categoria.descricao}}</b>
+                </article>
+                <article id="basico">
+                    <b>Descrição:</b> {{ categoria.descricao }}<br>
+                    <b>Valor:</b> {{ categoria.valor }}<br>
+                </article>
+            </div>
+        {% endfor %}
+    </section>
+    <a id="add" href="{% url 'cadastrar_categoria' %}"><ion-icon name="add-outline"></ion-icon></a>
+    {% endif %}
+{% endblock lista %}

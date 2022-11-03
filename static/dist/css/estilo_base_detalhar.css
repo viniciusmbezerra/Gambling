@@ -1,0 +1,149 @@
+section.detalhar {
+    width: 100%;
+
+    padding-top: 20px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.note {
+    width: 90%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+form#formulario {
+    max-width: 500px;
+    width: 98%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article#banner {
+    height: 20vh;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px grey, inset 0px 0px 20px 12px #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+    color: white;
+    text-shadow: 0px 0px 13px grey ;
+}
+
+article#basico p#icone {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+article#basico p#icone img{
+    width: 150px;
+    border-radius: 50%;
+}
+
+article#titulo {
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+    background-color: #333333;
+    box-shadow: 0px 0px 3px grey;
+    
+    color: white;   
+}
+
+article#basico {
+    padding: 10px;  
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 3px grey;
+} 
+
+article#basico p {
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+article#basico span.helptext {
+    width: 180px;
+    position: fixed;
+    display: none;
+    font-size: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    transform: translate(80%, 20%);
+    background-color: rgb(215, 215, 215);
+}
+
+article#basico span.helptext::before {
+    content: '';
+    position: fixed;
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgb(215, 215, 215);
+    transform: translate(0%, -140%);
+}
+
+article#basico p:hover > span.helptext {
+    display: block;
+}
+
+article#basico p{
+    width: 100%;
+}
+
+article#basico > ul {
+    background-color: rgb(211, 242, 255);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+article#basico > ul > li{
+    max-width: 300px;
+    font-size: 10px;
+}
+
+p > button#enviar, button#cadastrar {    
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+button#enviar {
+    color: white;
+    background-color: rgb(98, 163, 0);
+}
+
+button#enviar:hover {
+    background-color: green;
+}
+
+button#cadastrar {
+    color: white;
+    background-color: rgb(0, 125, 163);
+}
+
+button#cadastrar:hover {
+    background-color: rgb(0, 58, 128);
+}
+
+a#esqueci {
+    font-size: 12px;
+    text-decoration: underline;
+    color: red;
+}

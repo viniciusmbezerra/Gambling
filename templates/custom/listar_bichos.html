@@ -1,0 +1,53 @@
+{% extends 'base/base.html' %}
+
+{% block lista %}
+    {% if user.is_authenticated %}
+        <section class="filtros">
+            <div id="pesquisa">
+                <input id="entrada" type="text" maxlength="60">    
+                <ion-icon name="search-outline"></ion-icon>
+            </div>
+            <ul>
+                <li>
+                    <b>Filtro 01:</b><br>
+                    <select>
+                        <option>crescente</option>
+                    </select>
+                </li>
+                <li>
+                    <b>Filtro 02:</b><br>
+                    <select>
+                        <option>crescente</option>
+                    </select>
+                </li>
+                <li>
+                    <b>Filtro 03:</b><br>
+                    <select>
+                        <option>crescente</option>
+                    </select>
+                </li>
+                <li>
+                    <b>Filtro 04:</b><br>
+                    <select>
+                        <option>crescente</option>
+                    </select>
+                </li>
+            </ul>
+        </section>
+        <section class="listagem">
+        {% for bicho in bichos %}
+            <div class='bicho'>
+                <img src="{{bicho.icone.url}}">
+                <div class="info">
+                    <a class="tag"><b>Codigo:</b> {{bicho.id}}# BICHO</a><br>
+                    <a class="tag"><b>Nome:</b> {{bicho.nome}}</a><br>
+                    <a class="tag"><b>Grupo:</b> {{bicho.grupo}}</a><br>
+                    <a class="tag"><b>Dezenas:</b> {{bicho.dezenhas}}</a><br>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+    <a id="add" href="{% url 'cadastrar_bicho' %}"><ion-icon name="add-outline"></ion-icon></a>
+    
+    {% endif %}
+{% endblock lista %}

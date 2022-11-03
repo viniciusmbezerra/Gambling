@@ -1,0 +1,89 @@
+nav#menu {
+    width: 100%;
+    background: linear-gradient(124deg, #00ff5d, #00977b);
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+nav#menu > ul {
+    display: flex;
+    align-items: flex-end;
+}
+
+nav#menu > ul > li{
+    float: left;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+
+nav#menu > ul > li{
+    padding-left: 15px;
+    padding-right: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+nav#menu > ul > li:nth-last-child(1){
+    margin-right: 10px;
+}
+
+nav#menu > ul > li a {
+    color: white;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+nav#menu > ul > li:hover a{
+    color: black;
+}
+
+nav#menu > ul > li:hover{
+    background-color: white;
+}
+
+nav#menu img#icone{
+    width: 105px;
+    height: 100px;
+}
+
+nav#user {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    margin-top: 20px;
+    padding: 5px 20px 5px 6px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    background-color: white; 
+    box-shadow: 0px 0px 3px grey;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+}
+
+nav#user img#icone {
+    width: 25px;
+    margin-right: 5px;
+    border-radius: 15px;
+}
+
+nav#user b#saldo {
+    color: green;
+}
+
+nav#user b#admin {
+    color: blue;
+}

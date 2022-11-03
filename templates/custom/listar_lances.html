@@ -1,0 +1,59 @@
+{% extends 'base/base.html' %}
+
+{% block lista %}
+    <section class="filtros">
+        <div id="pesquisa">
+            <input id="entrada" type="text" maxlength="60">    
+            <ion-icon name="search-outline"></ion-icon>
+        </div>
+        <ul>
+            <li>
+                <b>Data:</b><br>
+                <select>
+                    <option>Recentes</option>
+                    <option>Antigos</option>
+                </select>
+            </li>
+            <li>
+                <b>Categoria:</b><br>
+                <select>
+                    <option>Simples</option>
+                    <option>Incomum</option>
+                    <option>Raro</option>
+                </select>
+            </li>
+            <li>
+                <b>Valor:</b><br>
+                <select>
+                    <option>Maior</option>
+                    <option>Menor</option>
+                </select>
+            </li>
+            <li>
+                <b>Total:</b><br>
+                <select>
+                    <option>Maior</option>
+                    <option>Menor</option>
+                </select>
+            </li>
+        </ul>
+    </section>
+    <section class="listagem">
+        {% for lance in lances %}
+            <div class='lance' onclick="link('{% url 'detalhar_lance_jb' id=lance.id %}');">
+                <b id="cod">{{lance.id}}</b> 
+                <img src="{{lance.banner.url}}">
+                <div class="info">
+                    <a class="tag"><b>Categoria:</b> {{lance.categoria.descricao}}</a><br>
+                    <a class="tag"><b>Valor:</b> R$ {{lance.categoria.valor}}</a><br>
+                    <a class="tag"><b>Duração:</b> {{lance.termina}}</a><br>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+    
+    {% if 'JogoDoBicho.add_lancejb' in perms %}        
+        <a id="add" href="{% url 'cadastrar_lance_jb' %}"><ion-icon name="add-outline"></ion-icon></a>
+    {% endif %}
+        
+{% endblock lista %}

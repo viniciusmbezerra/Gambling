@@ -1,0 +1,61 @@
+.filtros {
+    padding: 25px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.filtros #pesquisa {
+    width: 100%;
+    margin: 20px 0px;
+
+    border: 1px solid black;
+    border-radius: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly
+}
+
+.filtros #pesquisa input{
+    width: 88%;
+    margin-left: 10px;
+    border: none;
+}
+
+.filtros #pesquisa ion-icon{
+    margin: 0px 10px 0px 0px;
+}
+
+.filtros ul {
+    width: 100%;
+
+    padding: 0px 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.filtros ul li{
+    margin: 5px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.filtros ul li select{
+    border: transparent;
+    outline: none;
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+}
+
+.filtros ul li section option{
+    border: none;
+}

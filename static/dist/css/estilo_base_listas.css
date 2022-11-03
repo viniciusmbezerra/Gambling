@@ -1,0 +1,138 @@
+.listagem {
+    width: 1000px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cliente {
+    width: 190pt;
+    height: 60pt;
+
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 3px gray;
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+
+    line-height: 1;
+    cursor: pointer;
+}
+
+.cliente:hover {
+    box-shadow: 0px 0px 6px rgb(32, 32, 32);
+}
+
+.cliente #foto {
+    width:80px;
+    height: 80px;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.cliente #info {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+}
+
+.lance {
+    width: 190px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 3px gray;
+}
+
+.lance:hover {
+    box-shadow: 0px 0px 6px rgb(32, 32, 32);
+}
+
+.lance .info {
+    padding: 0px 10px 10px 10px;
+}
+
+.lance img{
+    width: 190px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+a#add {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    
+    width: 50px;
+    height: 50px;
+
+    margin: 10px;
+    border-radius: 50%;
+    
+    background-color: rgb(98, 163, 0);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+    color: white;
+    text-align: center;
+}
+
+a#add:hover {
+    background-color: green;
+}
+
+
+.bicho {
+    width: 200px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 3px gray;
+}
+
+.bicho:hover {
+    box-shadow: 0px 0px 6px rgb(32, 32, 32);
+}
+
+.bicho .info {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px -0.1px 1px grey;
+    padding: 0px 10px 10px 10px;
+}
+
+b#cod{
+    position: absolute;
+    background-color: greenyellow;
+    box-shadow: 0px 0px 3px gray;
+    color: white;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bicho img{
+    width: 200px;
+    height: 200px;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

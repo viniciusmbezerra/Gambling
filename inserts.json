@@ -1,0 +1,1114 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add administrador",
+    "content_type": 7,
+    "codename": "add_administrador"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change administrador",
+    "content_type": 7,
+    "codename": "change_administrador"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete administrador",
+    "content_type": 7,
+    "codename": "delete_administrador"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view administrador",
+    "content_type": 7,
+    "codename": "view_administrador"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add bicho",
+    "content_type": 8,
+    "codename": "add_bicho"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change bicho",
+    "content_type": 8,
+    "codename": "change_bicho"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete bicho",
+    "content_type": 8,
+    "codename": "delete_bicho"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view bicho",
+    "content_type": 8,
+    "codename": "view_bicho"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add categoria",
+    "content_type": 9,
+    "codename": "add_categoria"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change categoria",
+    "content_type": 9,
+    "codename": "change_categoria"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete categoria",
+    "content_type": 9,
+    "codename": "delete_categoria"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view categoria",
+    "content_type": 9,
+    "codename": "view_categoria"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add cliente",
+    "content_type": 10,
+    "codename": "add_cliente"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change cliente",
+    "content_type": 10,
+    "codename": "change_cliente"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete cliente",
+    "content_type": 10,
+    "codename": "delete_cliente"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view cliente",
+    "content_type": 10,
+    "codename": "view_cliente"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add lance",
+    "content_type": 11,
+    "codename": "add_lance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change lance",
+    "content_type": 11,
+    "codename": "change_lance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete lance",
+    "content_type": 11,
+    "codename": "delete_lance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view lance",
+    "content_type": 11,
+    "codename": "view_lance"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add lance lt",
+    "content_type": 12,
+    "codename": "add_lancelt"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change lance lt",
+    "content_type": 12,
+    "codename": "change_lancelt"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete lance lt",
+    "content_type": 12,
+    "codename": "delete_lancelt"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view lance lt",
+    "content_type": 12,
+    "codename": "view_lancelt"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add premio",
+    "content_type": 13,
+    "codename": "add_premio"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change premio",
+    "content_type": 13,
+    "codename": "change_premio"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete premio",
+    "content_type": 13,
+    "codename": "delete_premio"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view premio",
+    "content_type": 13,
+    "codename": "view_premio"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add aposta",
+    "content_type": 14,
+    "codename": "add_aposta"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change aposta",
+    "content_type": 14,
+    "codename": "change_aposta"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete aposta",
+    "content_type": 14,
+    "codename": "delete_aposta"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view aposta",
+    "content_type": 14,
+    "codename": "view_aposta"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add lance jb",
+    "content_type": 15,
+    "codename": "add_lancejb"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change lance jb",
+    "content_type": 15,
+    "codename": "change_lancejb"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete lance jb",
+    "content_type": 15,
+    "codename": "delete_lancejb"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view lance jb",
+    "content_type": 15,
+    "codename": "view_lancejb"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add evento",
+    "content_type": 16,
+    "codename": "add_evento"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change evento",
+    "content_type": 16,
+    "codename": "change_evento"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete evento",
+    "content_type": 16,
+    "codename": "delete_evento"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view evento",
+    "content_type": 16,
+    "codename": "view_evento"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add aposta lt",
+    "content_type": 17,
+    "codename": "add_apostalt"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change aposta lt",
+    "content_type": 17,
+    "codename": "change_apostalt"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete aposta lt",
+    "content_type": 17,
+    "codename": "delete_apostalt"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view aposta lt",
+    "content_type": 17,
+    "codename": "view_apostalt"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add aposta jb",
+    "content_type": 18,
+    "codename": "add_apostajb"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change aposta jb",
+    "content_type": 18,
+    "codename": "change_apostajb"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete aposta jb",
+    "content_type": 18,
+    "codename": "delete_apostajb"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view aposta jb",
+    "content_type": 18,
+    "codename": "view_apostajb"
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Administradores",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 2,
+  "fields": {
+    "name": "Clientes",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$QRAbaxVQAzT8IQkUUYTglI$Xa0DhpGBH1t/IIxhRUoRTpz/0WysOB/571NsiL0D9uo=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Administrador",
+    "last_name": "Geral",
+    "email": "admin@email.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-11-02T23:27:39.755",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "JogoDoBicho",
+    "model": "administrador"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "JogoDoBicho",
+    "model": "bicho"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "JogoDoBicho",
+    "model": "categoria"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "JogoDoBicho",
+    "model": "cliente"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "JogoDoBicho",
+    "model": "lance"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "JogoDoBicho",
+    "model": "lancelt"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "JogoDoBicho",
+    "model": "premio"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "JogoDoBicho",
+    "model": "aposta"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "JogoDoBicho",
+    "model": "lancejb"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "JogoDoBicho",
+    "model": "evento"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "JogoDoBicho",
+    "model": "apostalt"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "JogoDoBicho",
+    "model": "apostajb"
+  }
+},
+{
+  "model": "JogoDoBicho.administrador",
+  "pk": 1,
+  "fields": {
+    "usuario": 1,
+    "cpf": "000.000.000-00",
+    "data_nasc": "2000-01-01",
+    "foto": "static/dist/img/anonimo.png"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 1,
+  "fields": {
+    "nome": "Aguia",
+    "grupo": 1,
+    "icone": "JogoDoBicho/src/img/animais/AGUIA.png",
+    "dezenhas": "01-02-03-04"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 2,
+  "fields": {
+    "nome": "Avestruz",
+    "grupo": 2,
+    "icone": "JogoDoBicho/src/img/animais/AVESTRUZ.png",
+    "dezenhas": "05-06-07-08"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 3,
+  "fields": {
+    "nome": "Burro",
+    "grupo": 3,
+    "icone": "JogoDoBicho/src/img/animais/BURRO.png",
+    "dezenhas": "09-10-11-12"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 4,
+  "fields": {
+    "nome": "Borboleta",
+    "grupo": 4,
+    "icone": "JogoDoBicho/src/img/animais/BORBOLETA.png",
+    "dezenhas": "13-14-15-16"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 5,
+  "fields": {
+    "nome": "Cachorro",
+    "grupo": 5,
+    "icone": "JogoDoBicho/src/img/animais/CACHORRO.png",
+    "dezenhas": "17-18-19-20"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 6,
+  "fields": {
+    "nome": "Cabra",
+    "grupo": 6,
+    "icone": "JogoDoBicho/src/img/animais/CABRA.png",
+    "dezenhas": "21-22-23-24"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 7,
+  "fields": {
+    "nome": "Carneiro",
+    "grupo": 7,
+    "icone": "JogoDoBicho/src/img/animais/CARNEIRO.png",
+    "dezenhas": "25-26-27-28"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 8,
+  "fields": {
+    "nome": "Camelo",
+    "grupo": 8,
+    "icone": "JogoDoBicho/src/img/animais/CAMELO.png",
+    "dezenhas": "29-30-31-32"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 9,
+  "fields": {
+    "nome": "Cobra",
+    "grupo": 9,
+    "icone": "JogoDoBicho/src/img/animais/COBRA.png",
+    "dezenhas": "33-34-35-36"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 10,
+  "fields": {
+    "nome": "Coelho",
+    "grupo": 10,
+    "icone": "JogoDoBicho/src/img/animais/COELHO.png",
+    "dezenhas": "37-38-39-40"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 11,
+  "fields": {
+    "nome": "Cavalho",
+    "grupo": 11,
+    "icone": "JogoDoBicho/src/img/animais/CAVALO.png",
+    "dezenhas": "41-42-43-44"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 12,
+  "fields": {
+    "nome": "Efefante",
+    "grupo": 12,
+    "icone": "JogoDoBicho/src/img/animais/ELEFANTE.png",
+    "dezenhas": "45-46-47-48"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 13,
+  "fields": {
+    "nome": "Galo",
+    "grupo": 13,
+    "icone": "JogoDoBicho/src/img/animais/GALO.png",
+    "dezenhas": "49-50-51-52"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 14,
+  "fields": {
+    "nome": "Gato",
+    "grupo": 14,
+    "icone": "JogoDoBicho/src/img/animais/GATO.png",
+    "dezenhas": "53-54-55-56"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 15,
+  "fields": {
+    "nome": "Jacare",
+    "grupo": 15,
+    "icone": "JogoDoBicho/src/img/animais/JACARE.png",
+    "dezenhas": "57-58-59-60"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 16,
+  "fields": {
+    "nome": "LeÊo",
+    "grupo": 16,
+    "icone": "JogoDoBicho/src/img/animais/LEAO.png",
+    "dezenhas": "61-62-63-64"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 17,
+  "fields": {
+    "nome": "Macaco",
+    "grupo": 17,
+    "icone": "JogoDoBicho/src/img/animais/MACACO.png",
+    "dezenhas": "65-66-67-68"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 18,
+  "fields": {
+    "nome": "Porco",
+    "grupo": 18,
+    "icone": "JogoDoBicho/src/img/animais/PORCO.png",
+    "dezenhas": "69-70-71-72"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 19,
+  "fields": {
+    "nome": "PavÊo",
+    "grupo": 19,
+    "icone": "JogoDoBicho/src/img/animais/PAVAO.png",
+    "dezenhas": "73-74-75-76"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 20,
+  "fields": {
+    "nome": "Peru",
+    "grupo": 20,
+    "icone": "JogoDoBicho/src/img/animais/PERU.png",
+    "dezenhas": "77-78-79-80"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 21,
+  "fields": {
+    "nome": "Touro",
+    "grupo": 21,
+    "icone": "JogoDoBicho/src/img/animais/TOURO.png",
+    "dezenhas": "81-82-83-84"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 22,
+  "fields": {
+    "nome": "Tigre",
+    "grupo": 22,
+    "icone": "JogoDoBicho/src/img/animais/TIGRE.png",
+    "dezenhas": "85-86-87-88"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 23,
+  "fields": {
+    "nome": "Urso",
+    "grupo": 23,
+    "icone": "JogoDoBicho/src/img/animais/URSO.png",
+    "dezenhas": "89-90-91-92"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 24,
+  "fields": {
+    "nome": "Veado",
+    "grupo": 24,
+    "icone": "JogoDoBicho/src/img/animais/VEADO.png",
+    "dezenhas": "93-94-95-96"
+  }
+},
+{
+  "model": "JogoDoBicho.bicho",
+  "pk": 25,
+  "fields": {
+    "nome": "Vaca",
+    "grupo": 25,
+    "icone": "JogoDoBicho/src/img/animais/VACA.png",
+    "dezenhas": "97-98-99-00"
+  }
+},
+{
+  "model": "JogoDoBicho.categoria",
+  "pk": 1,
+  "fields": {
+    "descricao": "Comum",
+    "valor": 50.0
+  }
+},
+{
+  "model": "JogoDoBicho.categoria",
+  "pk": 2,
+  "fields": {
+    "descricao": "Incomum",
+    "valor": 100.0
+  }
+},
+{
+  "model": "JogoDoBicho.categoria",
+  "pk": 3,
+  "fields": {
+    "descricao": "Raro",
+    "valor": 200.0
+  }
+}
+]
