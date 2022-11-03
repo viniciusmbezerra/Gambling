@@ -21,20 +21,18 @@ python start_windows.py
 ## 1. Jogo do bicho
 Vídeo explicativo: https://drive.google.com/file/d/1zusej-WBqjRmz6jsh8lE5C5nBAI049i6/view?usp=share_link
 
-* Funcionalidade:
-  Noticias ->
-    Servem para avisar sobre os novos lances e os ganhadores de cada lance encerrado.
-  ---
-  Admin ->
-    Área de administração para a banca(casa)
-  ---
-  Design ->
-    Responsividade para todas as telas mobile e desktop
----
 
+* Noticias:
+  Servem para avisar sobre os novos lances e os ganhadores de cada lance encerrado.
+---
+* Admin:
+  Área de administração para a banca(casa)
+---
+* Design:
+  Responsividade para todas as telas mobile e desktop
+---
 * Lances:
  São banners de Jogos, são usados para iniciar um novo jogo, somente o administrador pode cria-lo.
-
 ---
 
 * Apostas:
