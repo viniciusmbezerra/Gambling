@@ -21,6 +21,25 @@ python start_windows.py
 ## 1. Jogo do bicho
 Vídeo explicativo: https://drive.google.com/file/d/1zusej-WBqjRmz6jsh8lE5C5nBAI049i6/view?usp=share_link
 
+* Funcionalidade
+ ** Noticias
+    Servem para avisar sobre os novos lances e os ganhadores de cada lance encerrado.
+ ** Admin
+    Área de administração para a banca(casa)
+
+* Lances
+ São banners de Jogos, são usados para iniciar um novo jogo, somente o administrador pode cria-lo.
+
+* Apostas
+ O clinte pode fazer mais de uma aposta no mesmo lance, podendo ser de animais diferente ou iguas.
+
+* Premiação
+ A banca(casa) por padrão fica com 15% do acumulado no lances.
+ Na 1º Prêmiação o ganhador levar 50% do valor descontado pela banca.
+ De 2º a 5º Prêmiação, qualquer ganhador leva 25% do restante.
+ valor acumulado é calculado pelo número de apostas feitas e valor da categoria do lance.
+ Em cada aposta o cliente pode aposta em dois bichos.
+
 ## 2. Mega Sena
 Vídeo explicativo: https://drive.google.com/file/d/1zusej-WBqjRmz6jsh8lE5C5nBAI049i6/view?usp=share_link
 
