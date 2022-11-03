@@ -2,15 +2,20 @@
 
 ## Instruções iniciais
 Antes de começarmos, certifique-se que tenha instalado o **python** e **virtualenv**. Abra o Terminal e crie uma virtualenv chamada **env**.
-No Windows:
+Caso Windows:
 <pre>
 virtualenv env
  . env env/Script/activate
 </pre>
-No Linux:
+Caso Linux:
 <pre>
 virtualenv env
  . env env/bin/activate
+</pre>
+E um iniciar o projeto:
+<pre>
+python start_windows.py
+# python start_linux.py
 </pre>
 
 ## 1. Jogo do bicho
