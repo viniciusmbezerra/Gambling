@@ -32,12 +32,12 @@ Vídeo explicativo: https://drive.google.com/file/d/1zusej-WBqjRmz6jsh8lE5C5nBAI
     Responsividade para todas as telas mobile e desktop
 ---
 
-* Lances
+* Lances:
  São banners de Jogos, são usados para iniciar um novo jogo, somente o administrador pode cria-lo.
 
 ---
 
-* Apostas
+* Apostas:
  O clinte pode fazer mais de uma aposta no mesmo lance, podendo ser de animais diferente ou iguas.
 
 * Premiação
