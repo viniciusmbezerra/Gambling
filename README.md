@@ -19,7 +19,7 @@ python start_windows.py
 </pre>
 
 ## 1. Jogo do bicho
-Vídeo explicativo: https://drive.google.com/file/d/1zusej-WBqjRmz6jsh8lE5C5nBAI049i6/view?usp=share_link
+Vídeo explicativo: https://clipchamp.com/watch/baNKur4FR0M
 
 
 * Noticias:
