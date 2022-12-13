@@ -23,7 +23,7 @@ class AdministradorForm(forms.ModelForm):
         fields = ('cpf', 'data_nasc', 'foto')
         widgets = {
             'cpf': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'XXX.XXX.XXX-XX'}),
-            'data_nasc': forms.DateInput(attrs={'class': 'form-control'}),
+            'data_nasc': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}, format='%Y-%m-%d'),
             'foto': forms.FileInput(attrs={'class': 'form-control'})
         }
 
@@ -37,6 +37,7 @@ class ClienteForm(forms.ModelForm):
         widgets = {
             'cpf': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'XXX.XXX.XXX-XX', 'label':'CPF'}),
             'foto': forms.FileInput(attrs={'class': 'form-control'}),
+            'data_nasc': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}, format='%Y-%m-%d'),
             'valor': forms.NumberInput(attrs={'class': 'form-control'})
         }
 
